@@ -10,12 +10,12 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-home = "../../../data"
+home = "../../home/data_shares/purrlab"
 dataframe = collect_data(home, args.dataset)
 if (
     args.dataset == "chest"
     or args.dataset == "thyroid"
-    or args.dataset == "mammograms"
+    or args.dataset == "mammograms" # is this dataset on purrlab?
     or args.dataset == "knee"
 ):
     gkf = GroupKFold(n_splits=5)

@@ -79,7 +79,7 @@ sys.path.append("..")
 # from mldgpu import MultilevelDNNGPUBenchmark
 import mldgpu
 
-mlflow = None
+#mlflow = None
 
 
 ### Import pre-trained weights from ImageNet or RadImageNet
@@ -248,7 +248,7 @@ Etensorboard = ExtendedTensorBoard(
 train_steps = len(train_generator.labels) / args.batch_size
 val_steps = len(validation_generator.labels) / args.batch_size
 
-with mldgpu.MultiLevelDNNGPUBenchmark() as run:
+'''with mldgpu.MultiLevelDNNGPUBenchmark() as run:
     mlflow = run
 
     # Log parameters to mlflow
@@ -262,59 +262,60 @@ with mldgpu.MultiLevelDNNGPUBenchmark() as run:
         plt.title("Label: {}".format(label[0]))
         plt.axis("off")
         plt.savefig("train_example.svg")  
-        mlflow.log_artifact("train_example.svg")
+        #mlflow.log_artifact("train_example.svg")
 
-    ml_metrics = {}
+   # ml_metrics = {}'''
 
-    if args.freeze:
-        if class_mode == "binary":
-            loss = BinaryCrossentropy()
-        else:
-            loss = CategoricalCrossentropy()
-        adam = Adam()
-        model.compile(optimizer=adam, loss=loss, metrics=["acc"])
-        model.fit(
-            train_generator,
-            epochs=args.epoch,
-            steps_per_epoch=train_steps,
-            validation_data=validation_generator,
-            validation_steps=val_steps,
-            callbacks=[f_es],
-        )
-
-        base_model.trainable = True
-
-        train_loss, train_acc = model.evaluate(train_generator)
-        val_loss, val_acc = model.evaluate(validation_generator)
-        ml_metrics["Fr train_loss"] = train_loss
-        ml_metrics["Fr train_acc"] = train_acc
-        ml_metrics["Fr val_loss"] = val_loss
-        ml_metrics["Fr val_acc"] = val_acc
-
-    mlflow.autolog()
+# We will put the carbon tracker starting here
+if args.freeze:
     if class_mode == "binary":
         loss = BinaryCrossentropy()
     else:
         loss = CategoricalCrossentropy()
-    adam = Adam(learning_rate=args.lr)
+    adam = Adam()
     model.compile(optimizer=adam, loss=loss, metrics=["acc"])
-    history = model.fit(
+    model.fit(
         train_generator,
         epochs=args.epoch,
         steps_per_epoch=train_steps,
         validation_data=validation_generator,
         validation_steps=val_steps,
-        callbacks=[Etensorboard, es, checkpoint],
+        callbacks=[f_es],
     )
 
-    mlflow.log_artifact(
-        "models/"
-        + target
-        + "-"
-        + database
-        + "-freeze"
-        + str(args.freeze)
-        + "-fold"
-        + str(args.k)
-        + ".h5"
-    )
+    base_model.trainable = True
+
+    train_loss, train_acc = model.evaluate(train_generator)
+    val_loss, val_acc = model.evaluate(validation_generator)
+    '''ml_metrics["Fr train_loss"] = train_loss
+    ml_metrics["Fr train_acc"] = train_acc
+    ml_metrics["Fr val_loss"] = val_loss
+    ml_metrics["Fr val_acc"] = val_acc
+
+    mlflow.autolog()'''
+if class_mode == "binary":
+    loss = BinaryCrossentropy()
+else:
+    loss = CategoricalCrossentropy()
+adam = Adam(learning_rate=args.lr)
+model.compile(optimizer=adam, loss=loss, metrics=["acc"])
+history = model.fit(
+    train_generator,
+    epochs=args.epoch,
+    steps_per_epoch=train_steps,
+    validation_data=validation_generator,
+    validation_steps=val_steps,
+    callbacks=[Etensorboard, es, checkpoint],
+)
+
+'''mlflow.log_artifact(
+    "models/"
+    + target
+    + "-"
+    + database
+    + "-freeze"
+    + str(args.freeze)
+    + "-fold"
+    + str(args.k)
+    + ".h5"
+)'''
