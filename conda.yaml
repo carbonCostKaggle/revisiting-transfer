@@ -5,7 +5,6 @@ dependencies:
   - python=3.9
   - pip
   - cudatoolkit
-  - tensorflow-gpu==2.8.0
   - pip:
       - tensorboardX
       - psutil
@@ -13,3 +12,4 @@ dependencies:
       - opencv-python
       - pillow
       - matplotlib
+      - tensorflow-gpu==2.8.0
