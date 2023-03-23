@@ -5,10 +5,10 @@ dependencies:
   - python=3.9
   - pip
   - cudatoolkit
+  - scikit-learn==0.23.2
   - pip:
       - tensorboardX
       - psutil
-      - scikit-learn==0.23.2
       - opencv-python
       - pillow
       - matplotlib
