@@ -450,7 +450,7 @@ def import_imagenet(data_dir):
     return dataframe
 
 
-def collect_data(home, target_data):
+def collect_data(home, target_data): # home="../purrlab" 
     """
     :param home: part of path that is specific to user, e.g. /Users/..../
     :param target_data: dataset used as target dataset

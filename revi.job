@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#SBATCH --job-name=revi             # Job name
+#SBATCH --output=job.%j.out         # Name of output file (%j expands to jobId)
+#SBATCH --cpus-per-task=1           # Schedule one core
+#SBATCH --gres=gpu                  # Schedule a GPU
+#SBATCH --time=23:00:00             # Run time (hh:mm:ss)
+#SBATCH --partition=brown           # Run on either the Red or Brown queue
+#SBATCH --mail-type=BEGIN,END,FAIL  # Send email when job begin ends or fails
+
+conda activate revi
+
+# make dataframes
+python3 make_dataframe.py --dataset "chest"
+python3 make_dataframe.py --dataset "thyroid"
+python3 make_dataframe.py --dataset "mammograms"
+python3 make_dataframe.py --dataset "knee"
+
+python3 make_dataframe.py --dataset "isic"
+python3 make_dataframe.py --dataset "breast"
+python3 make_dataframe.py --dataset "pcam-small"
+python3 make_dataframe.py --dataset "kimia"
+

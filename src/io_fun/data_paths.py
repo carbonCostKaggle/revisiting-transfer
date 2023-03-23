@@ -42,7 +42,7 @@ def get_path(home, dataset):
         return data_dir
 
     if dataset == "mammograms":
-        data_dir = f"{home}/mammograms"
+        data_dir = f"{home}/cbis-ddsm"
 
         return data_dir
 
