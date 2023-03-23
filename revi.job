@@ -9,8 +9,7 @@
 #SBATCH --mail-type=BEGIN,END,FAIL  # Send email when job begin ends or fails
 
 module load Anaconda3
-source activate revi
-module load TensorFlow/2.0.0-fosscuda-2019b-Python-3.7.4
+source activate revis
 echo $CONDA_DEFAULT_ENV
 
 
