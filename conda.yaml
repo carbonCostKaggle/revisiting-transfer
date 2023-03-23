@@ -12,5 +12,5 @@ dependencies:
       - opencv-python
       - pillow
       - matplotlib
-      - tensorflow-gpu==2.8.0
+      - tensorflow
       - carbontracker
