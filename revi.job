@@ -11,13 +11,13 @@
 conda activate revi
 
 # make dataframes
-python3 make_dataframe.py --dataset "chest"
-python3 make_dataframe.py --dataset "thyroid"
-python3 make_dataframe.py --dataset "mammograms"
-python3 make_dataframe.py --dataset "knee"
+python3 src/make_dataframe.py --dataset "chest"
+python3 src/make_dataframe.py --dataset "thyroid"
+python3 src/make_dataframe.py --dataset "mammograms"
+python3 src/make_dataframe.py --dataset "knee"
 
-python3 make_dataframe.py --dataset "isic"
-python3 make_dataframe.py --dataset "breast"
-python3 make_dataframe.py --dataset "pcam-small"
-python3 make_dataframe.py --dataset "kimia"
+python3 src/make_dataframe.py --dataset "isic"
+python3 src/make_dataframe.py --dataset "breast"
+python3 src/make_dataframe.py --dataset "pcam-small"
+python3 src/make_dataframe.py --dataset "kimia"
 

@@ -10,7 +10,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-home = "../purrlab"
+home = "../../purrlab"
 dataframe = collect_data(home, args.dataset)
 if (
     args.dataset == "chest"
