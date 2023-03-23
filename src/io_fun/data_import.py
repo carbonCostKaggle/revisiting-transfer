@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from .data_paths import get_path
 from sklearn import preprocessing
-import cv2
+#import cv2
 from numpy.random import seed
 import tensorflow as tf
 

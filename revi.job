@@ -8,7 +8,11 @@
 #SBATCH --partition=brown           # Run on either the Red or Brown queue
 #SBATCH --mail-type=BEGIN,END,FAIL  # Send email when job begin ends or fails
 
-conda activate revi
+module load Anaconda3
+source activate revi
+module load TensorFlow/2.0.0-fosscuda-2019b-Python-3.7.4
+echo $CONDA_DEFAULT_ENV
+
 
 # make dataframes
 python3 src/make_dataframe.py --dataset "chest"
