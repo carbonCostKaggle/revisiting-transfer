@@ -1,4 +1,4 @@
-name: XXXXXX
+name: revi
 channels:
   - conda-forge
 dependencies:
@@ -13,3 +13,4 @@ dependencies:
       - pillow
       - matplotlib
       - tensorflow-gpu==2.8.0
+      - carbontracker
