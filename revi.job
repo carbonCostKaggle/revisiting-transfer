@@ -9,7 +9,7 @@
 #SBATCH --mail-type=BEGIN,END,FAIL  # Send email when job begin ends or fails
 
 module load Anaconda3
-source activate /home/data_shares/ccdd/revisi
+source activate /home/data_shares/ccdd/rev
 echo $CONDA_DEFAULT_ENV
 
 

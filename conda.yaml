@@ -1,4 +1,4 @@
-name: revisi
+name: rev
 channels:
   - conda-forge
 dependencies:
