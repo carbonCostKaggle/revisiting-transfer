@@ -3,9 +3,13 @@
 #SBATCH --job-name=env              # Job name
 #SBATCH --output=job.%j.out         # Name of output file (%j expands to jobId)
 #SBATCH --cpus-per-task=1           # Schedule one core
+#SBATCH --gres=gpu                  # Schedule a GPU
 #SBATCH --time=23:00:00             # Run time (hh:mm:ss)
 #SBATCH --partition=brown           # Run on either the Red or Brown queue
 #SBATCH --mail-type=BEGIN,END,FAIL  # Send email when job begin ends or fails
 
 module load Anaconda3
-conda env create -p /home/data_shares/ccdd/rt -f conda.yaml
+conda env create -p /home/data_shares/ccdd/revisi -f conda.yaml
+conda activate revisi
+conda install -c anaconda scikit-learn==0.23.2
+

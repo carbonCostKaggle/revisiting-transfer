@@ -1,4 +1,4 @@
-name: rev
+name: rt
 channels:
   - conda-forge
 dependencies:
