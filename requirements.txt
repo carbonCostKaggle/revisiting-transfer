@@ -1,0 +1,7 @@
+cuda-python
+tensorboardX
+psutil
+opencv-python
+Pillow
+matplotlib
+carbontracker
