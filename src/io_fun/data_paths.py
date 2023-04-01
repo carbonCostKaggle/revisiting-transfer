@@ -37,7 +37,7 @@ def get_path(home, dataset):
         return data_dir
 
     if dataset == "kimia":
-        data_dir = f"{home}/kimia_path_960"
+        data_dir = f"{home}/kimia-path_960"
 
         return data_dir
 
