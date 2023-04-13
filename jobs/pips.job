@@ -9,10 +9,13 @@
 
 module load TensorFlow
 module load scikit-learn/0.23.2-fosscuda-2020b
-python3 -m pip install -r requirements.txt
-python3 -c "import pandas as pd; print(pd.__version__)\n"
 
 cd ..
+python3 -m pip install -r requirements.txt
+pip install --upgrade pandas
+python3 -c "import pandas as pd; print(f'Pandas version: {pd.__version__}')"
+
+
 # make dataframes
 #python3 src/make_dataframe.py --dataset "isic"
 #python3 src/make_dataframe.py --dataset "breast"
