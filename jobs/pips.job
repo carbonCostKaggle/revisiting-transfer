@@ -17,17 +17,17 @@ cd ..
 #python3 src/make_dataframe.py --dataset "breast"
 #python3 src/make_dataframe.py --dataset "kimia"
 
-echo "Making chest dataframe"
-python3 src/make_dataframe.py --dataset "chest"
-
-echo "Making thyroid dataframe"
+echo -e "\nMaking thyroid dataframe"
 python3 src/make_dataframe.py --dataset "thyroid"
 
-echo "Making mammograms dataframe"
+echo -e "\nMaking chest dataframe"
+python3 src/make_dataframe.py --dataset "chest"
+
+echo -e "\nMaking mammograms dataframe"
 python3 src/make_dataframe.py --dataset "mammograms"
 
-echo "Making knee dataframe"
+echo -e "\nMaking knee dataframe"
 python3 src/make_dataframe.py --dataset "knee"
 
-echo "Making pcam-small dataframe"
+echo -e "\nMaking pcam-small dataframe"
 python3 src/make_dataframe.py --dataset "pcam-small"
