@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
+from carbontracker.tracker import CarbonTracker
 
 import argparse
 parser = argparse.ArgumentParser()
@@ -267,55 +268,54 @@ val_steps = len(validation_generator.labels) / args.batch_size
    # ml_metrics = {}'''
 
 # We will put the carbon tracker starting here
-if args.freeze:
+tracker = CarbonTracker(epochs=1)
+for epoch in range(1):
+    tracker.epoch_start()
+    
+    # your model training
+    if args.freeze:
+        if class_mode == "binary":
+            loss = BinaryCrossentropy()
+        else:
+            loss = CategoricalCrossentropy()
+        adam = Adam()
+        model.compile(optimizer=adam, loss=loss, metrics=["acc"])
+        model.fit(
+            train_generator,
+            epochs=args.epoch,
+            steps_per_epoch=train_steps,
+            validation_data=validation_generator,
+            validation_steps=val_steps,
+            callbacks=[f_es],
+        )
+
+        base_model.trainable = True
+
+        train_loss, train_acc = model.evaluate(train_generator)
+        val_loss, val_acc = model.evaluate(validation_generator)
+        '''ml_metrics["Fr train_loss"] = train_loss
+        ml_metrics["Fr train_acc"] = train_acc
+        ml_metrics["Fr val_loss"] = val_loss
+        ml_metrics["Fr val_acc"] = val_acc
+
+        mlflow.autolog()'''
     if class_mode == "binary":
         loss = BinaryCrossentropy()
     else:
         loss = CategoricalCrossentropy()
-    adam = Adam()
+    adam = Adam(learning_rate=args.lr)
     model.compile(optimizer=adam, loss=loss, metrics=["acc"])
-    model.fit(
+    history = model.fit(
         train_generator,
         epochs=args.epoch,
         steps_per_epoch=train_steps,
         validation_data=validation_generator,
         validation_steps=val_steps,
-        callbacks=[f_es],
+        callbacks=[Etensorboard, es, checkpoint],
     )
+    tracker.epoch_end()
 
-    base_model.trainable = True
+# Optional: Add a stop in case of early termination before all monitor_epochs has
+# been monitored to ensure that actual consumption is reported.
+tracker.stop()
 
-    train_loss, train_acc = model.evaluate(train_generator)
-    val_loss, val_acc = model.evaluate(validation_generator)
-    '''ml_metrics["Fr train_loss"] = train_loss
-    ml_metrics["Fr train_acc"] = train_acc
-    ml_metrics["Fr val_loss"] = val_loss
-    ml_metrics["Fr val_acc"] = val_acc
-
-    mlflow.autolog()'''
-if class_mode == "binary":
-    loss = BinaryCrossentropy()
-else:
-    loss = CategoricalCrossentropy()
-adam = Adam(learning_rate=args.lr)
-model.compile(optimizer=adam, loss=loss, metrics=["acc"])
-history = model.fit(
-    train_generator,
-    epochs=args.epoch,
-    steps_per_epoch=train_steps,
-    validation_data=validation_generator,
-    validation_steps=val_steps,
-    callbacks=[Etensorboard, es, checkpoint],
-)
-
-'''mlflow.log_artifact(
-    "models/"
-    + target
-    + "-"
-    + database
-    + "-freeze"
-    + str(args.freeze)
-    + "-fold"
-    + str(args.k)
-    + ".h5"
-)'''
