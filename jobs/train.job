@@ -11,7 +11,10 @@ module load TensorFlow
 module load scikit-learn/0.23.2-fosscuda-2020b
 
 cd ..
-python3 -m pip install -r requirements.txt
+#python3 -m pip install -r requirements.txt
 
 # train on breast dataset
-python src/fine-tuning.py --base RadImageNet --t breast --image_h 112 --image_w 112 --freeze False --e 200 --k 1 --batch 128 --l 0.00001
+python3 src/fine-tuning.py --base ImageNet --t breast --image_h 112 --image_w 112 --freeze False --e 200 --k 1 --batch 128 --l 0.00001
+
+#python3 src/fine-tuning.py --base ImageNet --t ISIC --image_h 112 --image_w 112 --freeze False --e 200 --k 1 --batch 128 --l 0.00001
+#python3 src/fine-tuning.py --base ImageNet --t kimia --image_h 112 --image_w 112 --freeze False --e 200 --k 1 --batch 128 --l 0.00001
