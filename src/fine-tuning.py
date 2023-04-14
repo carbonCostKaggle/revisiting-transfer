@@ -268,7 +268,7 @@ val_steps = len(validation_generator.labels) / args.batch_size
    # ml_metrics = {}'''
 
 # We will put the carbon tracker starting here
-tracker = CarbonTracker(epochs=1)
+tracker = CarbonTracker(args.epoch)
 for epoch in range(1):
     tracker.epoch_start()
     
