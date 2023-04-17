@@ -182,7 +182,7 @@ def import_PCAM(data_dir, target_data):
             entry
         )  # combine entry with other entries for dataframe
 
-    dataframe = pd.concat(
+    dataframe = pd.concat( # ERROR SEEMS TO BE HERE
         dataframe_entries, ignore_index=True
     )  # create dataframe from list of tables and reset index
 
