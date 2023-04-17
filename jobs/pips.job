@@ -1,16 +1,21 @@
 #!/bin/bash
 
-#SBATCH --job-name=pips              # Job name
+#SBATCH --job-name=pips_pcampcamsmall Job name
 #SBATCH --output=job.%j.out         # Name of output file
 #SBATCH --cpus-per-task=2           # Schedule 8 cores (includes hyperthreading)
 #SBATCH --time=2:00:00              # Run time (hh:mm:ss) - run for 2 hours max
 #SBATCH --partition=brown           # Run on either the Red or Brown queue
 #SBATCH --mail-type=BEGIN,FAIL,END
 
+echo -e "\nloading Tensorflow"
 module load TensorFlow
+
+echo -e "\nloading scikit-learn"
 module load scikit-learn/0.23.2-fosscuda-2020b
 
 cd ..
+
+echo -e "\nUpgrade pip, install requirements, upgrade pandas"
 python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
 pip install --upgrade pandas
@@ -22,17 +27,17 @@ python3 -c "import pandas as pd; print(f'Pandas version: {pd.__version__}')"
 #python3 src/make_dataframe.py --dataset "breast"
 #python3 src/make_dataframe.py --dataset "kimia"
 
-echo -e "\nMaking thyroid dataframe"
-python3 src/make_dataframe.py --dataset "thyroid"
+#echo -e "\nMaking thyroid dataframe"
+#python3 src/make_dataframe.py --dataset "thyroid"
 
-echo -e "\nMaking chest dataframe"
-python3 src/make_dataframe.py --dataset "chest"
+#echo -e "\nMaking chest dataframe"
+#python3 src/make_dataframe.py --dataset "chest"
 
-echo -e "\nMaking mammograms dataframe"
-python3 src/make_dataframe.py --dataset "mammograms"
+#echo -e "\nMaking mammograms dataframe"
+#python3 src/make_dataframe.py --dataset "mammograms"
 
-echo -e "\nMaking knee dataframe"
-python3 src/make_dataframe.py --dataset "knee"
+#echo -e "\nMaking knee dataframe"
+#python3 src/make_dataframe.py --dataset "knee"
 
 echo -e "\nMaking pcam-small dataframe"
 python3 src/make_dataframe.py --dataset "pcam-small"
