@@ -43,3 +43,42 @@ Requirement already satisfied: charset-normalizer~=2.0.0 in /home/ddeq/.local/li
 Requirement already satisfied: idna<4,>=2.5 in /home/ddeq/.local/lib/python3.8/site-packages (from requests->carbontracker->-r requirements.txt (line 7)) (3.2)
 Requirement already satisfied: decorator in /opt/itu/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages (from ratelim->geocoder->carbontracker->-r requirements.txt (line 7)) (4.4.2)
 Installing collected packages: numpy, pandas
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+albumentations 1.0.0 requires PyYAML, which is not installed.
+albumentations 1.0.0 requires scikit-image>=0.16.1, which is not installed.
+imgaug 0.4.0 requires imageio, which is not installed.
+imgaug 0.4.0 requires scikit-image>=0.14.2, which is not installed.
+Successfully installed numpy-1.21.2 pandas-2.0.0
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pandas in /opt/itu/easybuild/software/SciPy-bundle/2020.11-fosscuda-2020b/lib/python3.8/site-packages (1.1.4)
+Collecting pandas
+  Using cached pandas-2.0.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/ddeq/.local/lib/python3.8/site-packages (from pandas) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /opt/itu/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages (from pandas) (2020.1)
+Requirement already satisfied: tzdata>=2022.1 in /home/ddeq/.local/lib/python3.8/site-packages (from pandas) (2023.3)
+Collecting numpy>=1.20.3 (from pandas)
+  Using cached numpy-1.24.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+Requirement already satisfied: six>=1.5 in /home/ddeq/.local/lib/python3.8/site-packages (from python-dateutil>=2.8.2->pandas) (1.16.0)
+Installing collected packages: numpy, pandas
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+albumentations 1.0.0 requires PyYAML, which is not installed.
+albumentations 1.0.0 requires scikit-image>=0.16.1, which is not installed.
+imgaug 0.4.0 requires imageio, which is not installed.
+imgaug 0.4.0 requires scikit-image>=0.14.2, which is not installed.
+Successfully installed numpy-1.21.2 pandas-2.0.0
+Pandas version: 1.1.4
+
+Making pcam-small dataframe
+2023-04-17 16:31:59.162412: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+Traceback (most recent call last):
+  File "src/make_dataframe.py", line 14, in <module>
+    dataframe = collect_data(home, args.dataset)
+  File "/home/data_shares/ccdd/revisiting-transfer/src/io_fun/data_import.py", line 466, in collect_data
+    dataframe = import_PCAM(data_dir, target_data)
+  File "/home/data_shares/ccdd/revisiting-transfer/src/io_fun/data_import.py", line 185, in import_PCAM
+    dataframe = pd.concat(
+  File "/opt/itu/easybuild/software/SciPy-bundle/2020.11-fosscuda-2020b/lib/python3.8/site-packages/pandas/core/reshape/concat.py", line 274, in concat
+    op = _Concatenator(
+  File "/opt/itu/easybuild/software/SciPy-bundle/2020.11-fosscuda-2020b/lib/python3.8/site-packages/pandas/core/reshape/concat.py", line 331, in __init__
+    raise ValueError("No objects to concatenate")
+ValueError: No objects to concatenate
