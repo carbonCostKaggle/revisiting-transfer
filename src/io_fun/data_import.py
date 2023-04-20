@@ -362,7 +362,10 @@ def import_knee(data_dir):
     )  # create dataframe from list of tables and reset index
     # get labels
     img_df = dataframe["path"].str.split("/", expand=True)
-    img_df["pid"] = img_df[7].str.split("_", expand=True)[0]
+    print(img_df)
+    print(type(img_df))
+    print(len(img_df))
+    img_df["pid"] = img_df[7].str.split("_", expand=True)[0] # BUGS HERE ##############
     dataframe["pid"] = img_df["pid"]
     train_acl = pd.read_csv(data_dir + "/train-acl.csv", header=None, dtype={0: object})
     acl_df = img_df[img_df[6] == "acl"]
