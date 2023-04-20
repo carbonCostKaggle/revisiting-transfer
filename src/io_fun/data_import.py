@@ -100,13 +100,15 @@ def import_chest(data_dir):
         dataframe_entries, ignore_index=True
     )  # create dataframe from list of tables and reset index
     file_name = dataframe["path"].str.split("/", expand=True)
-    print("THIS IS A STUPID PRINT STATEMENT")
+    print("=================== THIS IS A STUPID PRINT STATEMENT ==========================")
     print(file_name)
     print(type(file_name))
-    file_name[7] = file_name[7].map(
+    print("=================== THIS ENDS THE PRINT STATEMENT =============================")
+    # CHANGING 7 to 6, because our dataframe has only 7 columns
+    file_name[6] = file_name[6].map(
         lambda x: x.lstrip("IMNORMAL2").lstrip("-IM").replace("_", "-") # BUGS HERE
     )
-    pid = file_name[7].str.split("-", expand=True)
+    pid = file_name[6].str.split("-", expand=True)
     dataframe["pid"] = pid[0]
     print(
         dataframe["class"].value_counts()
@@ -362,14 +364,18 @@ def import_knee(data_dir):
     )  # create dataframe from list of tables and reset index
     # get labels
     img_df = dataframe["path"].str.split("/", expand=True)
+    print("============== THESE ARE SOME REDICULOUS PRINTS ===============")
     print(img_df)
     print(type(img_df))
     print(len(img_df))
-    img_df["pid"] = img_df[7].str.split("_", expand=True)[0] # BUGS HERE ##############
+    print("============== THIS ENDS THE REDICULOUS PRINTS =================")
+    # CHANGED 7 to 6
+    img_df["pid"] = img_df[6].str.split("_", expand=True)[0] # BUGS HERE ##############
     dataframe["pid"] = img_df["pid"]
     train_acl = pd.read_csv(data_dir + "/train-acl.csv", header=None, dtype={0: object})
-    acl_df = img_df[img_df[6] == "acl"]
-    meniscus_df = img_df[img_df[6] == "meniscus"]
+    # CHANGED 6 to 5
+    acl_df = img_df[img_df[5] == "acl"]
+    meniscus_df = img_df[img_df[5] == "meniscus"]
     val_acl = pd.read_csv(data_dir + "/valid-acl.csv", header=None, dtype={0: object})
     train_meniscus = pd.read_csv(
         data_dir + "/train-meniscus.csv", header=None, dtype={0: object}
@@ -386,11 +392,14 @@ def import_knee(data_dir):
     meniscus_df = meniscus_df.merge(full_meniscus, on="pid")
     meniscus_df["class"] = np.where(meniscus_df["1_y"] == 0, "normal", "meniscus")
     dataframe = pd.concat([acl_df, meniscus_df], ignore_index=True)
+    # NOT SURE IF WE NEED TO DO SOMETHING ABOUT 1_x HERE
     dataframe["path"] = dataframe[[0, "1_x", 2, 3, 4, 5, 6, 7]].agg("/".join, axis=1)
     print(
         dataframe["class"].value_counts()
     )  # get information on distribution of labels in dataframe
-
+    print("======= ANOTHER SILLY PRINT STATEMENT, dataframe after aggregation ================== ")
+    print(dataframe)
+    print("===============  ENDING THE PRINT STATEMENT =================================>")
     return dataframe
 
 
