@@ -397,8 +397,8 @@ def import_knee(data_dir):
     print("============== DATAFRAME COLUMNS: ====================================================")
     print(dataframe.columns)
     print("===============  ENDING THE PRINT STATEMENT =================================>")
-    # REMOVED '1_x' BETWEEN 0 and 2...
-    dataframe["path"] = dataframe[[0, 2, 3, 4, 5, 6, 7]].agg("/".join, axis=1)
+    # REMOVED 7 #############
+    dataframe["path"] = dataframe[[0, '1_x', 2, 3, 4, 5, 6]].agg("/".join, axis=1)
     print(
         dataframe["class"].value_counts()
     )  # get information on distribution of labels in dataframe
