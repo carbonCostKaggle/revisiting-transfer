@@ -100,8 +100,11 @@ def import_chest(data_dir):
         dataframe_entries, ignore_index=True
     )  # create dataframe from list of tables and reset index
     file_name = dataframe["path"].str.split("/", expand=True)
+    print("THIS IS A STUPID PRINT STATEMENT")
+    print(file_name)
+    print(type(file_name))
     file_name[7] = file_name[7].map(
-        lambda x: x.lstrip("IMNORMAL2").lstrip("-IM").replace("_", "-")
+        lambda x: x.lstrip("IMNORMAL2").lstrip("-IM").replace("_", "-") # BUGS HERE
     )
     pid = file_name[7].str.split("-", expand=True)
     dataframe["pid"] = pid[0]
@@ -400,7 +403,7 @@ def import_mammograms(data_dir):
     full = pd.concat([calc_train, calc_test, mass_train, mass_test])
     full.loc[full["pathology"] == "BENIGN_WITHOUT_CALLBACK", "pathology"] = "BENIGN"
     full["image file path"] = (
-        "../../purrlab/cbis-ddsm/"
+        "../../purrlab/cbis-ddsm/" # point this at our folder with symbolic links ##########
         + full["image file path"].str.split("/", expand=True)[0]
         + ".png"
     )
