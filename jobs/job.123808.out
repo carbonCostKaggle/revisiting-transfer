@@ -1,0 +1,74 @@
+desktop3
+2023-04-17 19:40:33.638858: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-04-17 19:40:44.442299: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2023-04-17 19:40:44.459360: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2023-04-17 19:40:45.038183: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-04-17 19:40:45.038716: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:01:00.0 name: NVIDIA GeForce RTX 2070 computeCapability: 7.5
+coreClock: 1.71GHz coreCount: 36 deviceMemorySize: 7.79GiB deviceMemoryBandwidth: 417.29GiB/s
+2023-04-17 19:40:45.038746: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-04-17 19:40:45.850765: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2023-04-17 19:40:45.850886: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2023-04-17 19:40:46.189116: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2023-04-17 19:40:46.830066: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2023-04-17 19:40:47.594408: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.11
+2023-04-17 19:40:47.801096: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2023-04-17 19:40:48.014901: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2023-04-17 19:40:48.015084: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-04-17 19:40:48.015604: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-04-17 19:40:48.016000: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2023-04-17 19:40:48.017153: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2023-04-17 19:40:48.017274: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-04-17 19:40:48.017675: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:01:00.0 name: NVIDIA GeForce RTX 2070 computeCapability: 7.5
+coreClock: 1.71GHz coreCount: 36 deviceMemorySize: 7.79GiB deviceMemoryBandwidth: 417.29GiB/s
+2023-04-17 19:40:48.017706: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-04-17 19:40:48.017730: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2023-04-17 19:40:48.017747: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2023-04-17 19:40:48.017764: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2023-04-17 19:40:48.017781: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2023-04-17 19:40:48.017797: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.11
+2023-04-17 19:40:48.017818: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2023-04-17 19:40:48.017835: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2023-04-17 19:40:48.017892: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-04-17 19:40:48.018293: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-04-17 19:40:48.018672: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2023-04-17 19:40:48.018698: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-04-17 19:40:49.125756: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-04-17 19:40:49.125792: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2023-04-17 19:40:49.125798: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2023-04-17 19:40:49.126038: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-04-17 19:40:49.126479: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-04-17 19:40:49.126918: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-04-17 19:40:49.127293: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7301 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce RTX 2070, pci bus id: 0000:01:00.0, compute capability: 7.5)
+2023-04-17 19:40:51.705973: I tensorflow/core/profiler/lib/profiler_session.cc:136] Profiler session initializing.
+2023-04-17 19:40:51.706013: I tensorflow/core/profiler/lib/profiler_session.cc:155] Profiler session started.
+2023-04-17 19:40:51.706031: I tensorflow/core/profiler/internal/gpu/cupti_tracer.cc:1365] Profiler found 1 GPUs
+2023-04-17 19:40:51.798205: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcupti.so.11.1
+2023-04-17 19:40:51.881702: I tensorflow/core/profiler/lib/profiler_session.cc:172] Profiler session tear down.
+2023-04-17 19:40:51.881852: I tensorflow/core/profiler/internal/gpu/cupti_tracer.cc:1487] CUPTI activity buffer flushed
+/opt/itu/easybuild/software/TensorFlow/2.4.1-fosscuda-2020b/lib/python3.8/site-packages/keras_preprocessing/image/dataframe_iterator.py:279: UserWarning: Found 2854 invalid image filename(s) in x_col="path". These filename(s) will be ignored.
+  warnings.warn(
+/opt/itu/easybuild/software/TensorFlow/2.4.1-fosscuda-2020b/lib/python3.8/site-packages/keras_preprocessing/image/dataframe_iterator.py:279: UserWarning: Found 714 invalid image filename(s) in x_col="path". These filename(s) will be ignored.
+  warnings.warn(
+Found 0 validated image filenames belonging to 0 classes.
+Found 0 validated image filenames belonging to 0 classes.
+THIS IS A PRINT STATEMENT ==================================+++++===
+['NVIDIA GeForce RTX 2070']
+CarbonTracker: The following components were found: GPU with device(s) NVIDIA GeForce RTX 2070. CPU with device(s) cpu:0.
+Traceback (most recent call last):
+  File "src/fine-tuning.py", line 283, in <module>
+    model.fit(
+  File "/opt/itu/easybuild/software/TensorFlow/2.4.1-fosscuda-2020b/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 1050, in fit
+    data_handler = data_adapter.DataHandler(
+  File "/opt/itu/easybuild/software/TensorFlow/2.4.1-fosscuda-2020b/lib/python3.8/site-packages/tensorflow/python/keras/engine/data_adapter.py", line 1100, in __init__
+    self._adapter = adapter_cls(
+  File "/opt/itu/easybuild/software/TensorFlow/2.4.1-fosscuda-2020b/lib/python3.8/site-packages/tensorflow/python/keras/engine/data_adapter.py", line 902, in __init__
+    super(KerasSequenceAdapter, self).__init__(
+  File "/opt/itu/easybuild/software/TensorFlow/2.4.1-fosscuda-2020b/lib/python3.8/site-packages/tensorflow/python/keras/engine/data_adapter.py", line 779, in __init__
+    peek, x = self._peek_and_restore(x)
+  File "/opt/itu/easybuild/software/TensorFlow/2.4.1-fosscuda-2020b/lib/python3.8/site-packages/tensorflow/python/keras/engine/data_adapter.py", line 913, in _peek_and_restore
+    return x[0], x
+  File "/opt/itu/easybuild/software/TensorFlow/2.4.1-fosscuda-2020b/lib/python3.8/site-packages/keras_preprocessing/image/iterator.py", line 54, in __getitem__
+    raise ValueError('Asked to retrieve element {idx}, '
+ValueError: Asked to retrieve element 0, but the Sequence has length 0

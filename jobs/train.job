@@ -1,11 +1,11 @@
 #!/bin/bash
 
-#SBATCH --job-name=train_mamms      # Job name
+#SBATCH --job-name=train_chest      # Job name
 #SBATCH --output=job.%j.out         # Name of output file
 #SBATCH --cpus-per-task=8           # Schedule 8 cores (includes hyperthreading)
 #SBATCH --gres=gpu:1                # Schedule a GPU, or more with gpu:2 etc
 #SBATCH --time=3:00:00              # Run time (hh:mm:ss) - run for 2 hours max
-#SBATCH --partition=brown,red       # Run on either the Red or Brown queue
+#SBATCH --partition=brown           # Run on either the Red or Brown queue
 #SBATCH --mail-type=BEGIN,FAIL,END
 hostname
 
@@ -15,6 +15,12 @@ module load scikit-learn/0.23.2-fosscuda-2020b
 cd ..
 #python3 -m pip install -r requirements.txt
 
+# train mammograms
+#python3 src/fine-tuning.py --base ImageNet --t mammograms --image_h 112 --image_w 112 --freeze False --e 200 --k 1 --batch 128 --l 0.00001
+
+# train chest
+python3 src/fine-tuning.py --base ImageNet --t chest --image_h 112 --image_w 112 --freeze False --e 200 --k 1 --batch 128 --l 0.00001
+
 # train on breast dataset
 #python3 src/fine-tuning.py --base ImageNet --t breast --image_h 112 --image_w 112 --freeze False --e 200 --k 1 --batch 128 --l 0.00001
 
@@ -23,6 +29,3 @@ cd ..
 
 # train kimia
 #python3 src/fine-tuning.py --base ImageNet --t kimia --image_h 112 --image_w 112 --freeze False --e 200 --k 1 --batch 128 --l 0.00001
-
-# train mammograms
-python3 src/fine-tuning.py --base ImageNet --t mammograms --image_h 112 --image_w 112 --freeze False --e 200 --k 1 --batch 128 --l 0.00001

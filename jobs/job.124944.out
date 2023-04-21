@@ -1,0 +1,136 @@
+
+loading Tensorflow
+
+loading scikit-learn
+base
+
+Install requirements, check pandas version
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: cuda-python in /home/ddeq/.local/lib/python3.8/site-packages (from -r requirements.txt (line 1)) (12.1.0)
+Requirement already satisfied: tensorboardX in /home/ddeq/.local/lib/python3.8/site-packages (from -r requirements.txt (line 2)) (2.6)
+Requirement already satisfied: psutil in /opt/itu/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages (from -r requirements.txt (line 3)) (5.7.2)
+Requirement already satisfied: opencv-python in /home/ddeq/.local/lib/python3.8/site-packages (from -r requirements.txt (line 4)) (4.2.0.32)
+Requirement already satisfied: Pillow in /home/ddeq/.local/lib/python3.8/site-packages (from -r requirements.txt (line 5)) (8.3.1)
+Requirement already satisfied: matplotlib in /home/ddeq/.local/lib/python3.8/site-packages (from -r requirements.txt (line 6)) (3.4.3)
+Requirement already satisfied: carbontracker in /home/ddeq/.local/lib/python3.8/site-packages (from -r requirements.txt (line 7)) (1.1.7)
+Collecting pandas>=2.0.0 (from -r requirements.txt (line 8))
+  Using cached pandas-2.0.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+Requirement already satisfied: cython in /home/ddeq/.local/lib/python3.8/site-packages (from cuda-python->-r requirements.txt (line 1)) (0.29.24)
+Requirement already satisfied: numpy in /opt/itu/easybuild/software/SciPy-bundle/2020.11-fosscuda-2020b/lib/python3.8/site-packages (from tensorboardX->-r requirements.txt (line 2)) (1.19.4)
+Requirement already satisfied: packaging in /home/ddeq/.local/lib/python3.8/site-packages (from tensorboardX->-r requirements.txt (line 2)) (21.0)
+Requirement already satisfied: protobuf<4,>=3.8.0 in /opt/itu/easybuild/software/protobuf-python/3.14.0-GCCcore-10.2.0/lib/python3.8/site-packages (from tensorboardX->-r requirements.txt (line 2)) (3.14.0)
+Requirement already satisfied: cycler>=0.10 in /home/ddeq/.local/lib/python3.8/site-packages (from matplotlib->-r requirements.txt (line 6)) (0.10.0)
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/ddeq/.local/lib/python3.8/site-packages (from matplotlib->-r requirements.txt (line 6)) (1.3.1)
+Requirement already satisfied: pyparsing>=2.2.1 in /opt/itu/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages (from matplotlib->-r requirements.txt (line 6)) (2.4.7)
+Requirement already satisfied: python-dateutil>=2.7 in /home/ddeq/.local/lib/python3.8/site-packages (from matplotlib->-r requirements.txt (line 6)) (2.8.2)
+Requirement already satisfied: requests in /home/ddeq/.local/lib/python3.8/site-packages (from carbontracker->-r requirements.txt (line 7)) (2.26.0)
+Requirement already satisfied: geocoder in /home/ddeq/.local/lib/python3.8/site-packages (from carbontracker->-r requirements.txt (line 7)) (1.38.1)
+Requirement already satisfied: pynvml in /home/ddeq/.local/lib/python3.8/site-packages (from carbontracker->-r requirements.txt (line 7)) (11.5.0)
+Requirement already satisfied: importlib-metadata in /home/ddeq/.local/lib/python3.8/site-packages (from carbontracker->-r requirements.txt (line 7)) (4.6.4)
+Requirement already satisfied: pytz>=2020.1 in /home/ddeq/.local/lib/python3.8/site-packages (from pandas>=2.0.0->-r requirements.txt (line 8)) (2023.3)
+Requirement already satisfied: tzdata>=2022.1 in /home/ddeq/.local/lib/python3.8/site-packages (from pandas>=2.0.0->-r requirements.txt (line 8)) (2023.3)
+Collecting numpy (from tensorboardX->-r requirements.txt (line 2))
+  Using cached numpy-1.24.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+Requirement already satisfied: six in /home/ddeq/.local/lib/python3.8/site-packages (from cycler>=0.10->matplotlib->-r requirements.txt (line 6)) (1.16.0)
+Requirement already satisfied: click in /home/ddeq/.local/lib/python3.8/site-packages (from geocoder->carbontracker->-r requirements.txt (line 7)) (8.0.1)
+Requirement already satisfied: future in /opt/itu/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages (from geocoder->carbontracker->-r requirements.txt (line 7)) (0.18.2)
+Requirement already satisfied: ratelim in /home/ddeq/.local/lib/python3.8/site-packages (from geocoder->carbontracker->-r requirements.txt (line 7)) (0.1.6)
+Requirement already satisfied: zipp>=0.5 in /home/ddeq/.local/lib/python3.8/site-packages (from importlib-metadata->carbontracker->-r requirements.txt (line 7)) (3.5.0)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /home/ddeq/.local/lib/python3.8/site-packages (from requests->carbontracker->-r requirements.txt (line 7)) (1.26.6)
+Requirement already satisfied: certifi>=2017.4.17 in /home/ddeq/.local/lib/python3.8/site-packages (from requests->carbontracker->-r requirements.txt (line 7)) (2021.5.30)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /home/ddeq/.local/lib/python3.8/site-packages (from requests->carbontracker->-r requirements.txt (line 7)) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in /home/ddeq/.local/lib/python3.8/site-packages (from requests->carbontracker->-r requirements.txt (line 7)) (3.2)
+Requirement already satisfied: decorator in /opt/itu/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages (from ratelim->geocoder->carbontracker->-r requirements.txt (line 7)) (4.4.2)
+Installing collected packages: numpy, pandas
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+albumentations 1.0.0 requires PyYAML, which is not installed.
+albumentations 1.0.0 requires scikit-image>=0.16.1, which is not installed.
+imgaug 0.4.0 requires imageio, which is not installed.
+imgaug 0.4.0 requires scikit-image>=0.14.2, which is not installed.
+Successfully installed numpy-1.21.2 pandas-2.0.0
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.10.1
+  latest version: 23.3.1
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+# All requested packages already installed.
+
+Pandas version: 1.1.4
+
+Making knee dataframe
+2023-04-20 16:19:04.057963: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+============== THESE ARE SOME REDICULOUS PRINTS ===============
+       0   1        2     3       4         5                            6
+0     ..  ..  purrlab  knee  images       acl  0812_sagittal_12.000000.png
+1     ..  ..  purrlab  knee  images       acl  1140_sagittal_19.000000.png
+2     ..  ..  purrlab  knee  images       acl  0467_sagittal_14.000000.png
+3     ..  ..  purrlab  knee  images       acl  1203_sagittal_17.000000.png
+4     ..  ..  purrlab  knee  images       acl  1138_sagittal_10.000000.png
+...   ..  ..      ...   ...     ...       ...                          ...
+5217  ..  ..  purrlab  knee  images  meniscus   0858_sagittal_8.000000.png
+5218  ..  ..  purrlab  knee  images  meniscus  1027_sagittal_12.000000.png
+5219  ..  ..  purrlab  knee  images  meniscus  1086_sagittal_19.000000.png
+5220  ..  ..  purrlab  knee  images  meniscus  1025_sagittal_17.000000.png
+5221  ..  ..  purrlab  knee  images  meniscus  1151_sagittal_26.000000.png
+
+[5222 rows x 7 columns]
+<class 'pandas.core.frame.DataFrame'>
+5222
+============== THIS ENDS THE REDICULOUS PRINTS =================
+======= ANOTHER SILLY PRINT STATEMENT, dataframe before aggregation ================== 
+       0 1_x        2     3  ...                            6   pid 1_y     class
+0     ..  ..  purrlab  knee  ...  0812_sagittal_12.000000.png  0812   1       acl
+1     ..  ..  purrlab  knee  ...  0812_sagittal_13.000000.png  0812   1       acl
+2     ..  ..  purrlab  knee  ...  1140_sagittal_19.000000.png  1140   0    normal
+3     ..  ..  purrlab  knee  ...  1140_sagittal_20.000000.png  1140   0    normal
+4     ..  ..  purrlab  knee  ...  1140_sagittal_21.000000.png  1140   0    normal
+...   ..  ..      ...   ...  ...                          ...   ...  ..       ...
+5217  ..  ..  purrlab  knee  ...  0235_sagittal_11.000000.png  0235   1  meniscus
+5218  ..  ..  purrlab  knee  ...   0115_sagittal_6.000000.png  0115   0    normal
+5219  ..  ..  purrlab  knee  ...  0084_sagittal_25.000000.png  0084   1  meniscus
+5220  ..  ..  purrlab  knee  ...  0160_sagittal_26.000000.png  0160   0    normal
+5221  ..  ..  purrlab  knee  ...   0201_sagittal_6.000000.png  0201   0    normal
+
+[5222 rows x 10 columns]
+============== DATAFRAME COLUMNS: ====================================================
+Index([0, '1_x', 2, 3, 4, 5, 6, 'pid', '1_y', 'class'], dtype='object')
+===============  ENDING THE PRINT STATEMENT =================================>
+normal      4235
+acl          569
+meniscus     418
+Name: class, dtype: int64
+======= ANOTHER SILLY PRINT STATEMENT, dataframe after aggregation ================== 
+       0 1_x  ...     class                                               path
+0     ..  ..  ...       acl  ../../purrlab/knee/images/acl/0812_sagittal_12...
+1     ..  ..  ...       acl  ../../purrlab/knee/images/acl/0812_sagittal_13...
+2     ..  ..  ...    normal  ../../purrlab/knee/images/acl/1140_sagittal_19...
+3     ..  ..  ...    normal  ../../purrlab/knee/images/acl/1140_sagittal_20...
+4     ..  ..  ...    normal  ../../purrlab/knee/images/acl/1140_sagittal_21...
+...   ..  ..  ...       ...                                                ...
+5217  ..  ..  ...  meniscus  ../../purrlab/knee/images/meniscus/0235_sagitt...
+5218  ..  ..  ...    normal  ../../purrlab/knee/images/meniscus/0115_sagitt...
+5219  ..  ..  ...  meniscus  ../../purrlab/knee/images/meniscus/0084_sagitt...
+5220  ..  ..  ...    normal  ../../purrlab/knee/images/meniscus/0160_sagitt...
+5221  ..  ..  ...    normal  ../../purrlab/knee/images/meniscus/0201_sagitt...
+
+[5222 rows x 11 columns]
+===============  ENDING THE PRINT STATEMENT =================================>
+train: 4177
+val: 1045
+train: 4177
+val: 1045
+train: 4178
+val: 1044
+train: 4178
+val: 1044
+train: 4178
+val: 1044
