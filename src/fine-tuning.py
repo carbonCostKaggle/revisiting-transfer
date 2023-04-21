@@ -267,9 +267,11 @@ val_steps = len(validation_generator.labels) / args.batch_size
 
    # ml_metrics = {}'''
 
-# We will put the carbon tracker starting here
-tracker = CarbonTracker(args.epoch)
+# We will put the carbon tracker starting here ################################
+tracker = CarbonTracker(args.epoch) # args.epoch == 200
+
 for epoch in range(1):
+    #########################################################
     tracker.epoch_start()
     
     # your model training
@@ -313,6 +315,7 @@ for epoch in range(1):
         validation_steps=val_steps,
         callbacks=[Etensorboard, es, checkpoint],
     )
+    ######################################################################
     tracker.epoch_end()
 
 # Optional: Add a stop in case of early termination before all monitor_epochs has

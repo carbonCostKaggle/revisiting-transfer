@@ -470,7 +470,7 @@ def import_imagenet(data_dir):
     return dataframe
 
 
-def collect_data(home, target_data): # home="../purrlab" 
+def collect_data(home, target_data): # home="../../purrlab" target_data=args.dataset
     """
     :param home: part of path that is specific to user, e.g. /Users/..../
     :param target_data: dataset used as target dataset
@@ -480,7 +480,7 @@ def collect_data(home, target_data): # home="../purrlab"
         img_dir, label_dir = get_path(home, target_data)
         dataframe = import_ISIC(img_dir, label_dir)
     else:
-        data_dir = get_path(home, target_data)
+        data_dir = get_path(home, target_data) # for pcam-small: "../../purrlab/PCam/png_images"
 
         if (target_data == "pcam-middle") | (target_data == "pcam-small"):
             dataframe = import_PCAM(data_dir, target_data)
