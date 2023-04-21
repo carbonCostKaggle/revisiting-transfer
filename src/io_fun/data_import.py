@@ -420,7 +420,7 @@ def import_mammograms(data_dir):
     full = pd.concat([calc_train, calc_test, mass_train, mass_test])
     full.loc[full["pathology"] == "BENIGN_WITHOUT_CALLBACK", "pathology"] = "BENIGN"
     full["image file path"] = (
-        "../../purrlab/cbis-ddsm/" # point this at our folder with symbolic links ##########
+        "../../ccdd/image_link/" # point this at our folder with symbolic links ##########
         + full["image file path"].str.split("/", expand=True)[0]
         + ".png"
     )
