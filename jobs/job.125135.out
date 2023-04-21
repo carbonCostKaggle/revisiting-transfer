@@ -1,0 +1,87 @@
+desktop17
+
+The following have been reloaded with a version change:
+  1) CUDA/11.0.2-GCC-9.3.0 => CUDA/11.1.1-GCC-10.2.0
+  2) CUDAcore/11.0.2 => CUDAcore/11.1.1
+  3) Check/0.15.2-GCCcore-9.3.0 => Check/0.15.2-GCCcore-10.2.0
+  4) FFTW/3.3.8-gompic-2020a => FFTW/3.3.8-gompic-2020b
+  5) GCC/9.3.0 => GCC/10.2.0
+  6) GCCcore/9.3.0 => GCCcore/10.2.0
+  7) GDRCopy/2.1-GCCcore-9.3.0-CUDA-11.0.2 => GDRCopy/2.1-GCCcore-10.2.0-CUDA-11.1.1
+  8) GMP/6.2.0-GCCcore-9.3.0 => GMP/6.2.0-GCCcore-10.2.0
+  9) OpenBLAS/0.3.9-GCC-9.3.0 => OpenBLAS/0.3.12-GCC-10.2.0
+ 10) OpenMPI/4.0.3-gcccuda-2020a => OpenMPI/4.0.5-gcccuda-2020b
+ 11) PMIx/3.1.5-GCCcore-9.3.0 => PMIx/3.1.5-GCCcore-10.2.0
+ 12) Python/3.8.2-GCCcore-9.3.0 => Python/3.8.6-GCCcore-10.2.0
+ 13) SQLite/3.31.1-GCCcore-9.3.0 => SQLite/3.33.0-GCCcore-10.2.0
+ 14) ScaLAPACK/2.1.0-gompic-2020a => ScaLAPACK/2.1.0-gompic-2020b
+ 15) SciPy-bundle/2020.03-fosscuda-2020a-Python-3.8.2 => SciPy-bundle/2020.11-fosscuda-2020b
+ 16) Tcl/8.6.10-GCCcore-9.3.0 => Tcl/8.6.10-GCCcore-10.2.0
+ 17) UCX/1.8.0-GCCcore-9.3.0-CUDA-11.0.2 => UCX/1.9.0-GCCcore-10.2.0-CUDA-11.1.1
+ 18) XZ/5.2.5-GCCcore-9.3.0 => XZ/5.2.5-GCCcore-10.2.0
+ 19) binutils/2.34-GCCcore-9.3.0 => binutils/2.35-GCCcore-10.2.0
+ 20) bzip2/1.0.8-GCCcore-9.3.0 => bzip2/1.0.8-GCCcore-10.2.0
+ 21) fosscuda/2020a => fosscuda/2020b
+ 22) gcccuda/2020a => gcccuda/2020b
+ 23) gompic/2020a => gompic/2020b
+ 24) hwloc/2.2.0-GCCcore-9.3.0 => hwloc/2.2.0-GCCcore-10.2.0
+ 25) libevent/2.1.11-GCCcore-9.3.0 => libevent/2.1.12-GCCcore-10.2.0
+ 26) libfabric/1.11.0-GCCcore-9.3.0 => libfabric/1.11.0-GCCcore-10.2.0
+ 27) libffi/3.3-GCCcore-9.3.0 => libffi/3.3-GCCcore-10.2.0
+ 28) libpciaccess/0.16-GCCcore-9.3.0 => libpciaccess/0.16-GCCcore-10.2.0
+ 29) libreadline/8.0-GCCcore-9.3.0 => libreadline/8.0-GCCcore-10.2.0
+ 30) libxml2/2.9.10-GCCcore-9.3.0 => libxml2/2.9.10-GCCcore-10.2.0
+ 31) ncurses/6.2-GCCcore-9.3.0 => ncurses/6.2-GCCcore-10.2.0
+ 32) numactl/2.0.13-GCCcore-9.3.0 => numactl/2.0.13-GCCcore-10.2.0
+ 33) pybind11/2.4.3-GCCcore-9.3.0-Python-3.8.2 => pybind11/2.6.0-GCCcore-10.2.0
+ 34) zlib/1.2.11-GCCcore-9.3.0 => zlib/1.2.11-GCCcore-10.2.0
+
+2023-04-21 12:08:54.944459: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.11.0
+2023-04-21 12:09:17.341459: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2023-04-21 12:09:18.579304: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:af:00.0 name: Quadro RTX 8000 computeCapability: 7.5
+coreClock: 1.77GHz coreCount: 72 deviceMemorySize: 47.46GiB deviceMemoryBandwidth: 625.94GiB/s
+2023-04-21 12:09:18.579384: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.11.0
+2023-04-21 12:09:19.383811: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.11
+2023-04-21 12:09:19.725329: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2023-04-21 12:09:20.361135: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2023-04-21 12:09:20.440300: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcusolver.so.10'; dlerror: libcusolver.so.10: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/itu/easybuild/software/SciPy-bundle/2020.11-fosscuda-2020b/lib/python3.8/site-packages/numpy/core/lib:/opt/itu/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/GCCcore/10.2.0/lib64:/opt/itu/easybuild/software/libffi/3.3-GCCcore-10.2.0/lib64:/opt/itu/easybuild/software/GMP/6.2.0-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/XZ/5.2.5-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/SQLite/3.33.0-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/Tcl/8.6.10-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/zlib/1.2.11-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/libreadline/8.0-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/ncurses/6.2-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/bzip2/1.0.8-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/binutils/2.35-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/ScaLAPACK/2.1.0-gompic-2020b/lib:/opt/itu/easybuild/software/OpenBLAS/0.3.12-GCC-10.2.0/lib:/opt/itu/easybuild/software/FFTW/3.3.8-gompic-2020b/lib:/opt/itu/easybuild/software/OpenMPI/4.0.5-gcccuda-2020b/lib:/opt/itu/easybuild/software/PMIx/3.1.5-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/hwloc/2.2.0-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/libevent/2.1.12-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/libfabric/1.11.0-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/UCX/1.9.0-GCCcore-10.2.0-CUDA-11.1.1/lib:/opt/itu/easybuild/software/GDRCopy/2.1-GCCcore-10.2.0-CUDA-11.1.1/lib:/opt/itu/easybuild/software/Check/0.15.2-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/CUDAcore/11.1.1/nvvm/lib64:/opt/itu/easybuild/software/CUDAcore/11.1.1/extras/CUPTI/lib64:/opt/itu/easybuild/software/CUDAcore/11.1.1/lib:/opt/itu/easybuild/software/numactl/2.0.13-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/libpciaccess/0.16-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/libxml2/2.9.10-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/snappy/1.1.8-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/libpng/1.6.37-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/protobuf/3.13.0-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/PCRE/8.44-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/nsync/1.24.0-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/LMDB/0.9.24-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/libjpeg-turbo/2.0.4-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/JsonCpp/1.9.4-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/ICU/66.1-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/giflib/5.2.1-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/flatbuffers/1.12.0-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/double-conversion/3.1.5-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/cURL/7.69.1-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/HDF5/1.10.6-gompic-2020a/lib:/opt/itu/easybuild/software/Szip/2.1.1-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/NCCL/2.8.3-GCCcore-9.3.0-CUDA-11.0.2/lib:/opt/itu/easybuild/software/cuDNN/8.0.4.30-CUDA-11.0.2/lib:/opt/ohpc/pub/mpi/openmpi3-gnu8/3.1.4/lib:/opt/ohpc/pub/compiler/gcc/8.3.0/lib64
+2023-04-21 12:09:20.598720: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.11
+2023-04-21 12:09:20.998701: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.8
+2023-04-21 12:09:20.998763: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1753] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2023-04-21 12:09:21.019806: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-04-21 12:09:21.019861: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      
+2023-04-21 12:09:21.019992: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+2023-04-21 12:09:24.765843: I tensorflow/core/profiler/lib/profiler_session.cc:164] Profiler session started.
+2023-04-21 12:09:24.766190: I tensorflow/core/profiler/internal/gpu/cupti_tracer.cc:1391] Profiler found 1 GPUs
+2023-04-21 12:09:24.774501: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'libcupti.so.11.0'; dlerror: libcupti.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/itu/easybuild/software/SciPy-bundle/2020.11-fosscuda-2020b/lib/python3.8/site-packages/numpy/core/lib:/opt/itu/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/GCCcore/10.2.0/lib64:/opt/itu/easybuild/software/libffi/3.3-GCCcore-10.2.0/lib64:/opt/itu/easybuild/software/GMP/6.2.0-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/XZ/5.2.5-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/SQLite/3.33.0-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/Tcl/8.6.10-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/zlib/1.2.11-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/libreadline/8.0-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/ncurses/6.2-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/bzip2/1.0.8-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/binutils/2.35-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/ScaLAPACK/2.1.0-gompic-2020b/lib:/opt/itu/easybuild/software/OpenBLAS/0.3.12-GCC-10.2.0/lib:/opt/itu/easybuild/software/FFTW/3.3.8-gompic-2020b/lib:/opt/itu/easybuild/software/OpenMPI/4.0.5-gcccuda-2020b/lib:/opt/itu/easybuild/software/PMIx/3.1.5-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/hwloc/2.2.0-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/libevent/2.1.12-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/libfabric/1.11.0-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/UCX/1.9.0-GCCcore-10.2.0-CUDA-11.1.1/lib:/opt/itu/easybuild/software/GDRCopy/2.1-GCCcore-10.2.0-CUDA-11.1.1/lib:/opt/itu/easybuild/software/Check/0.15.2-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/CUDAcore/11.1.1/nvvm/lib64:/opt/itu/easybuild/software/CUDAcore/11.1.1/extras/CUPTI/lib64:/opt/itu/easybuild/software/CUDAcore/11.1.1/lib:/opt/itu/easybuild/software/numactl/2.0.13-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/libpciaccess/0.16-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/libxml2/2.9.10-GCCcore-10.2.0/lib:/opt/itu/easybuild/software/snappy/1.1.8-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/libpng/1.6.37-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/protobuf/3.13.0-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/PCRE/8.44-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/nsync/1.24.0-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/LMDB/0.9.24-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/libjpeg-turbo/2.0.4-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/JsonCpp/1.9.4-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/ICU/66.1-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/giflib/5.2.1-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/flatbuffers/1.12.0-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/double-conversion/3.1.5-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/cURL/7.69.1-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/HDF5/1.10.6-gompic-2020a/lib:/opt/itu/easybuild/software/Szip/2.1.1-GCCcore-9.3.0/lib:/opt/itu/easybuild/software/NCCL/2.8.3-GCCcore-9.3.0-CUDA-11.0.2/lib:/opt/itu/easybuild/software/cuDNN/8.0.4.30-CUDA-11.0.2/lib:/opt/ohpc/pub/mpi/openmpi3-gnu8/3.1.4/lib:/opt/ohpc/pub/compiler/gcc/8.3.0/lib64
+2023-04-21 12:09:24.846102: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcupti.so
+2023-04-21 12:09:24.873782: I tensorflow/core/profiler/internal/gpu/cupti_tracer.cc:1513] CUPTI activity buffer flushed
+Found 0 validated image filenames belonging to 0 classes.
+Found 0 validated image filenames belonging to 0 classes.
+THIS IS A PRINT STATEMENT ==================================+++++===
+['Quadro RTX 8000']
+CarbonTracker: The following components were found: GPU with device(s) Quadro RTX 8000. CPU with device(s) cpu:0, cpu:1.
+/opt/itu/easybuild/software/TensorFlow/2.3.1-fosscuda-2020a-Python-3.8.2/lib/python3.8/site-packages/keras_preprocessing/image/dataframe_iterator.py:279: UserWarning: Found 2854 invalid image filename(s) in x_col="path". These filename(s) will be ignored.
+  warnings.warn(
+/opt/itu/easybuild/software/TensorFlow/2.3.1-fosscuda-2020a-Python-3.8.2/lib/python3.8/site-packages/keras_preprocessing/image/dataframe_iterator.py:279: UserWarning: Found 714 invalid image filename(s) in x_col="path". These filename(s) will be ignored.
+  warnings.warn(
+Traceback (most recent call last):
+  File "src/fine-tuning.py", line 285, in <module>
+    model.fit(
+  File "/opt/itu/easybuild/software/TensorFlow/2.3.1-fosscuda-2020a-Python-3.8.2/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 108, in _method_wrapper
+    return method(self, *args, **kwargs)
+  File "/opt/itu/easybuild/software/TensorFlow/2.3.1-fosscuda-2020a-Python-3.8.2/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 1049, in fit
+    data_handler = data_adapter.DataHandler(
+  File "/opt/itu/easybuild/software/TensorFlow/2.3.1-fosscuda-2020a-Python-3.8.2/lib/python3.8/site-packages/tensorflow/python/keras/engine/data_adapter.py", line 1105, in __init__
+    self._adapter = adapter_cls(
+  File "/opt/itu/easybuild/software/TensorFlow/2.3.1-fosscuda-2020a-Python-3.8.2/lib/python3.8/site-packages/tensorflow/python/keras/engine/data_adapter.py", line 909, in __init__
+    super(KerasSequenceAdapter, self).__init__(
+  File "/opt/itu/easybuild/software/TensorFlow/2.3.1-fosscuda-2020a-Python-3.8.2/lib/python3.8/site-packages/tensorflow/python/keras/engine/data_adapter.py", line 786, in __init__
+    peek, x = self._peek_and_restore(x)
+  File "/opt/itu/easybuild/software/TensorFlow/2.3.1-fosscuda-2020a-Python-3.8.2/lib/python3.8/site-packages/tensorflow/python/keras/engine/data_adapter.py", line 920, in _peek_and_restore
+    return x[0], x
+  File "/opt/itu/easybuild/software/TensorFlow/2.3.1-fosscuda-2020a-Python-3.8.2/lib/python3.8/site-packages/keras_preprocessing/image/iterator.py", line 54, in __getitem__
+    raise ValueError('Asked to retrieve element {idx}, '
+ValueError: Asked to retrieve element 0, but the Sequence has length 0
