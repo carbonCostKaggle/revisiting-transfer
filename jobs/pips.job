@@ -8,20 +8,25 @@
 #SBATCH --mail-type=BEGIN,FAIL,END
 #SBATCH --account=students
 
+module load Anaconda3/2021.05
+eval "$(conda shell.bash hook)"
+
 echo -e "\nloading Tensorflow"
 module load TensorFlow
 
 echo -e "\nloading scikit-learn"
 module load scikit-learn/0.23.2-fosscuda-2020b
 
-export PYTHONPATH="/home/ddeq/.local/lib/python3.8/site-packages":$PYTHONPATH
+#export PYTHONPATH="/home/ddeq/.local/lib/python3.8/site-packages":$PYTHONPATH
 
+source activate base
+echo $CONDA_DEFAULT_ENV
 cd ..
 
 #echo -e "\nInstall requirements, check pandas version"
-#python3 -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 #conda install pandas
-#python3 -c "import pandas as pd; print(f'Pandas version: {pd.__version__}')"
+python3 -c "import pandas as pd; print(f'Pandas version: {pd.__version__}')"
 
 # make dataframes
 echo -e "\nMaking mammograms dataframe"
