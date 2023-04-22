@@ -262,7 +262,7 @@ def import_thyroid(data_dir):
     label_entries = []
     for e, file_path in enumerate(files):
         if file_path.endswith(".jpg") == True:
-            splited = file_path.split("/")[5]
+            splited = file_path.split("/")[4] # CHANGED FROM 5 to 4
             pid = splited.split("_")[0]
             entry = pd.DataFrame(
                 [[pid, file_path]], columns=["pid", "path"]
