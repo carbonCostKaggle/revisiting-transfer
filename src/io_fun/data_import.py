@@ -420,7 +420,7 @@ def import_mammograms(data_dir):
     full = pd.concat([calc_train, calc_test, mass_train, mass_test])
     full.loc[full["pathology"] == "BENIGN_WITHOUT_CALLBACK", "pathology"] = "BENIGN"
     full["image file path"] = (
-        "../../purrlab/siim-covid19-detection/mamm_images" # point this at our folder with symbolic links ########## "../image_link/"
+        "../../purrlab/siim-covid19-detection/mamm_images/" # point this at our folder with symbolic links ########## "../image_link/"
         + full["image file path"].str.split("/", expand=True)[0]
         + ".png"
     )
@@ -480,10 +480,10 @@ def collect_data(home, target_data): # home="../../purrlab" target_data=args.dat
         img_dir, label_dir = get_path(home, target_data)
         dataframe = import_ISIC(img_dir, label_dir)
     else:
-        data_dir = get_path(home, target_data) # for pcam-small: "../../purrlab/PCam/png_images"
+        data_dir = get_path(home, target_data) 
 
         if (target_data == "pcam-middle") | (target_data == "pcam-small"):
-            dataframe = import_PCAM(data_dir, target_data)
+            dataframe = import_PCAM(data_dir, target_data) # for pcam-small: data_dir = "../../purrlab/PCam/png_images"
         elif target_data == "chest":
             dataframe = import_chest(data_dir)
         elif target_data == "kimia":
@@ -495,7 +495,7 @@ def collect_data(home, target_data): # home="../../purrlab" target_data=args.dat
         elif target_data == "knee":
             dataframe = import_knee(data_dir)
         elif target_data == "mammograms":
-            #data_dir = "../../purrlab/siim-covid19-detection" #################################
+            #data_dir = "../../purrlab/siim-covid19-detection/mamm_images"
             dataframe = import_mammograms(data_dir)
         elif target_data == "imagenet":
             dataframe = import_imagenet(data_dir)
