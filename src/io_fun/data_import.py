@@ -100,10 +100,6 @@ def import_chest(data_dir):
         dataframe_entries, ignore_index=True
     )  # create dataframe from list of tables and reset index
     file_name = dataframe["path"].str.split("/", expand=True)
-    print("=================== THIS IS A STUPID PRINT STATEMENT ==========================")
-    print(file_name)
-    print(type(file_name))
-    print("=================== THIS ENDS THE PRINT STATEMENT =============================")
     # CHANGING 7 to 6, because our dataframe has only 7 columns
     file_name[6] = file_name[6].map(
         lambda x: x.lstrip("IMNORMAL2").lstrip("-IM").replace("_", "-") # BUGS HERE
@@ -364,11 +360,6 @@ def import_knee(data_dir):
     )  # create dataframe from list of tables and reset index
     # get labels
     img_df = dataframe["path"].str.split("/", expand=True)
-    print("============== THESE ARE SOME REDICULOUS PRINTS ===============")
-    print(img_df) # dadaframe with [5222 rows x 7 columns]
-    print(type(img_df)) # <class 'pandas.core.frame.DataFrame'>
-    print(len(img_df)) # 5222
-    print("============== THIS ENDS THE REDICULOUS PRINTS =================")
     # CHANGED 7 to 6
     img_df["pid"] = img_df[6].str.split("_", expand=True)[0] # BUGS HERE ##############
     dataframe["pid"] = img_df["pid"]
@@ -392,19 +383,11 @@ def import_knee(data_dir):
     meniscus_df = meniscus_df.merge(full_meniscus, on="pid")
     meniscus_df["class"] = np.where(meniscus_df["1_y"] == 0, "normal", "meniscus")
     dataframe = pd.concat([acl_df, meniscus_df], ignore_index=True)
-    print("======= ANOTHER SILLY PRINT STATEMENT, dataframe before aggregation ================== ")
-    print(dataframe)
-    print("============== DATAFRAME COLUMNS: ====================================================")
-    print(dataframe.columns)
-    print("===============  ENDING THE PRINT STATEMENT =================================>")
     # REMOVED 7 #############
     dataframe["path"] = dataframe[[0, '1_x', 2, 3, 4, 5, 6]].agg("/".join, axis=1)
     print(
         dataframe["class"].value_counts()
     )  # get information on distribution of labels in dataframe
-    print("======= ANOTHER SILLY PRINT STATEMENT, dataframe after aggregation ================== ")
-    print(dataframe)
-    print("===============  ENDING THE PRINT STATEMENT =================================>")
     return dataframe
 
 
