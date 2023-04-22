@@ -142,6 +142,7 @@ print(df_train.head())
 df_val = pd.read_csv("data/" + target + "/val_fold" + str(args.k) + ".csv")
 print("============= PRINTING VALIDATION DATAFRAME HEAD ============================================")
 print(df_val.head())
+print(df_val.iloc[0]["path"][-25:])
 
 class_mode = compute_class_mode(target)
 

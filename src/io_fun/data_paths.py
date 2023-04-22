@@ -1,4 +1,4 @@
-def get_path(home, dataset):
+def get_path(home, dataset): # home="../../purrlab"
     """
     :param home: part of path that is specific to user, e.g. /Users/..../
     :param dataset: dataset name that needs to be collected. Note that this can either be a target or source dataset

@@ -495,6 +495,7 @@ def collect_data(home, target_data): # home="../../purrlab" target_data=args.dat
         elif target_data == "knee":
             dataframe = import_knee(data_dir)
         elif target_data == "mammograms":
+            #data_dir = "../../purrlab/siim-covid19-detection" #################################
             dataframe = import_mammograms(data_dir)
         elif target_data == "imagenet":
             dataframe = import_imagenet(data_dir)
