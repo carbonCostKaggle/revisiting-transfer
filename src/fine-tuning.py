@@ -135,6 +135,7 @@ if args.target == "mammograms":
     ImageFile.LOAD_TRUNCATED_IMAGES = True
 # Load data
 df_train = pd.read_csv("data/" + target + "/train_fold" + str(args.k) + ".csv")
+df_val = pd.read_csv("data/" + target + "/val_fold" + str(args.k) + ".csv")
 
 class_mode = compute_class_mode(target)
 
